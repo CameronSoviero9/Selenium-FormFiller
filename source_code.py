@@ -57,8 +57,8 @@ def main():
     experienceLevel_location = website_location.find_element_by_xpath('//*[@id="mG61Hd"]/div[2]/div/div[2]/div[3]/div/div/div[2]/div/div[2]/div[5]')
     experienceLevel_location.click()
 
-    time.sleep(0.5)     # 500ms wait time
-    
+    time.sleep(1)     # 500ms wait time
+
     # Click Submit
     submit_location = website_location.find_element_by_xpath('//*[@id="mG61Hd"]/div[2]/div/div[3]/div[1]/div[1]/div[2]/span')
     submit_location.click()
