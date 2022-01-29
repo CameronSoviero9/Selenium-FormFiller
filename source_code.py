@@ -51,17 +51,24 @@ def main():
     experience_location.click()
 
     # IMPORTANT: need to add a wait to give the page time to load drop down options
-    time.sleep(0.5)     # 500ms wait time
+    time.sleep(2)     # 2 second wait time
 
     # Select the experience level
     experienceLevel_location = website_location.find_element_by_xpath('//*[@id="mG61Hd"]/div[2]/div/div[2]/div[3]/div/div/div[2]/div/div[2]/div[5]')
     experienceLevel_location.click()
 
-    time.sleep(1)     # 500ms wait time
+    time.sleep(2)     # 2 second wait time
 
     # Click Submit
     submit_location = website_location.find_element_by_xpath('//*[@id="mG61Hd"]/div[2]/div/div[3]/div[1]/div[1]/div[2]/span')
     submit_location.click()
+
+    # Check that the submit button worked as expected
+    get_confirmation = website_location.find_element_by_css_selector(".freebirdFormviewerViewResponseConfirmationMessage")
+    if get_confirmation.text == "Your response has been recorded.":
+        print("Test script was successful")
+    else:
+        print("Test script did not complete form")
 
 ########## MAIN #########
 if __name__ == "__main__":
