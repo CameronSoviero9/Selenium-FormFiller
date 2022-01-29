@@ -9,7 +9,7 @@ your_name = 'My Name'
 your_birthday = '01/01/2000'
 other_language = "PHP"
 
-########## Functions #########
+########## FUNCTIONS #########
 def main():
     # Start filling out form here
     # Enter your name into the short answer box
